@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import chatMessages from './data/messages.json';
+import messagesData from './data/messages.json';
+
+import ChatLog from './components/ChatLog';
 
 class App extends Component {
   render() {
-    console.log(chatMessages);
-
+    // Customize the code below
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Application title</h1>
-        </header>
+        <div className="App-header">
+          <h1 className="App-title">Chat between Vladimir and Estragon</h1>
+          </div>
         <main className="App-main">
-
+          <ChatLog messages={messagesData} />
         </main>
       </div>
     );
   }
 }
-
 export default App;
